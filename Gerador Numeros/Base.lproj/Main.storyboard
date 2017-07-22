@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gerador_Numeros" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zD7-fI-Nl5">
+                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YBl-4V-Uci"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-z4-92h">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="G8O-Id-rgz"/>
+                                    <constraint firstAttribute="height" constant="200" id="TSh-nw-1Ql"/>
+                                </constraints>
+                                <state key="normal" image="botaogerar"/>
+                                <state key="highlighted" image="botaogerar-pressionado"/>
+                                <connections>
+                                    <action selector="gerarNumero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h27-Nn-XeF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnd-ea-Uvz">
+                                <rect key="frame" x="16" y="441" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2rh-ON-c73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.32941176470588235" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zD7-fI-Nl5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B3V-mC-d5P"/>
+                            <constraint firstItem="zD7-fI-Nl5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LtI-6U-4cd"/>
+                            <constraint firstItem="dnd-ea-Uvz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OQ1-3j-wJv"/>
+                            <constraint firstItem="dnd-ea-Uvz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bFx-w3-sxp"/>
+                            <constraint firstItem="hpW-z4-92h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="irU-8F-MyJ"/>
+                            <constraint firstItem="zD7-fI-Nl5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wsj-5m-bM4"/>
+                            <constraint firstItem="dnd-ea-Uvz" firstAttribute="top" secondItem="hpW-z4-92h" secondAttribute="bottom" constant="8" id="xyb-Db-ZMU"/>
+                            <constraint firstItem="hpW-z4-92h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhk-cy-ESx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="legendaResultado" destination="dnd-ea-Uvz" id="cjZ-fB-GKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botaogerar" width="261" height="261"/>
+        <image name="botaogerar-pressionado" width="261" height="261"/>
+        <image name="logo" width="328" height="130"/>
+    </resources>
+</document>
